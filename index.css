@@ -1,0 +1,53 @@
+/* screen - index (home screen) */
+
+/* Navbar Styles */
+.index .navbar{
+    overflow: hidden;
+}
+
+.index .navbar .back{
+    float: left;
+    display: block;
+    color: #54431e;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.index .navbar .about_me{
+    float: right;
+    display: block;
+    color: #54431e;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.index .navbar .projects{
+    float: right;
+    display: block;
+    color: #54431e;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.index .navbar .resume{
+    float: right;
+    display: block;
+    color: #54431e;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.index .navbar .contact{
+    float: right;
+    display: block;
+    color: #54431e;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+

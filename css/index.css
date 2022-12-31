@@ -5,6 +5,15 @@
 
 .index .navbar{
     overflow: hidden;
+    align-items: flex-end;
+    display: flex;
+    height: 161px;
+    justify-content: flex-end;
+    left: 0;
+    min-width: 1920px;
+    padding: 45px 53px;
+    position: absolute;
+    top: 0;
 }
 
 .index .navbar .about_me{

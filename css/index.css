@@ -1,7 +1,7 @@
 /* screen - index (home screen) */
 
 /* Navbar Styles */
-@import "globals";
+@import "globals.css";
 
 .index .navbar{
     overflow: hidden;

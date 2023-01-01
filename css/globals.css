@@ -3,7 +3,6 @@
 .html {
     font-size: 100%;
     box-sizing: border-box;
-    color: #eacd8e;
 }
 
 *, *::before, *::after {
@@ -14,5 +13,4 @@
     margin: 0;
     padding: 0;
     line-height: 1.3;
-    color: #eacd8e;
 }

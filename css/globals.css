@@ -14,30 +14,34 @@ body {
     padding: 20px;
 }
 
+/* HEADER CONTENT */
+
 header {
     background-color:  #77b5d9;
     color: #d7eaf3;
-    padding: 30px;
+    padding: 20px;
     justify-content: space-between; /* Align items horizontally */
     border-bottom-color: #14397d;
     border-bottom-style: solid;
+    display: flex;
+    align-items: center;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 24px;
+header .navbar {
+    display: flex;
+    align-items: center; /* Center navigation links vertically */
 }
 
 header ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    text-align: end;
 }
 
 header ul li {
     border-style: outset;
     border-color: #14397d;
+    background-color: #ece5b5;
     border-radius: 5px;
     display: inline;
     margin-right: 20px;
@@ -46,18 +50,58 @@ header ul li {
 }
 
 header ul li a {
-    color: #d7eaf3;
+    color: #14397d;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
+    text-align: normal;
 }
 
 /* Change the link color on hover */
 header ul li:hover {
     background-color:#14397d;
+    text-decoration: none;
+}
+
+header ul li:hover a {
+    color:#d7eaf3;
+    text-decoration: none;
+}
+
+header .home-icon {
+    padding: 0;
+    margin:0;
+    text-decoration: none;
+    border-style: outset;
+    border-color: #14397d;
+    border-radius: 5px;
+    display: inline;
+    margin-right: 20px;
+    padding-left:2px;
+    padding-right:2px;
+    background-color:#ece5b5;
+    display: flex;
+    align-items: center; /* Center navigation links vertically */
+}
+
+header .home-icon svg {
+    width: auto;
+}
+
+header .home-icon:hover {
+    background-color:#14397d;
     color: #d7eaf3;
     text-decoration: none;
 }
+
+header .home-icon:hover path {
+    stroke: #d7eaf3; /* Set the new fill color on hover */
+}
+header .home-icon:hover rect {
+    fill: #d7eaf3; /* Set the new fill color on hover */
+}
+
+/*MAIN CONTENT CSS*/
 
 main {
     padding: 40px 0;
@@ -84,9 +128,11 @@ section p {
 
 footer {
     background-color: #77b5d9; 
-    color: #d7eaf3;
+    color:  #14397d;;
     text-align: center;
     padding: 10px;
+    border-top-color: #14397d;
+    border-top-style: solid;
 }
 
 a {
@@ -94,17 +140,14 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
 .about-image {
-    max-width: 200px;
+    max-width: 30%;
     float: right;
     margin: 10px;
     /*shape-outside: circle(); /* This creates a circular text wrap */
     margin-left: 20px;
-    /*border-radius: 50%;*/
+    border-radius: 20%;
+    border: double #14397d;
 }
 
 .about-image.right {
@@ -151,7 +194,6 @@ a:hover {
     flex: 1; /* Occupies the remaining space */
 }
 
-
 .welcome h2 {
     color: #14397d;
     margin-top: 0;
@@ -163,3 +205,76 @@ a:hover {
     margin-top: 0;
     font-size: x-large;
 }
+
+/* About me */
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+/* Pop up card container */
+.card {
+    position: relative;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color:#fff;
+    background-clip: border-box;
+    border: 1px outset #000;
+    border-radius: 0.25rem;
+    width: 45%;
+    margin: 2%;
+  }
+
+  .card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+  }
+  
+  .card-title {
+    background-color: #14397d;
+    color:#ece5b5;
+    font-size: x-large;
+    padding:0.75rem;
+    border-bottom: 1px solid #d7eaf3;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+  
+  .card-subtitle {
+    margin-top: -0.375rem;
+    margin-bottom: 0;
+  }
+
+  .card-text:last-child {
+    margin: 0;
+  }
+
+  .card-img {
+    width: 100%;
+    border-radius: calc(0.25rem - 1px);
+  }
+  
+  .card-img-top {
+    width: 100%;
+  }
+  
+  .card-img-bottom {
+    width: 100%;
+    border-bottom-right-radius: calc(0.25rem - 1px);
+    border-bottom-left-radius: calc(0.25rem - 1px);
+  }

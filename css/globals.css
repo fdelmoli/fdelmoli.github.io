@@ -1,15 +1,17 @@
 /*global styles*/
 
 body {
-  font-family: Candara;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: medium;
+  font-style: normal;
+  font-weight: 400;
   margin: 0;
   padding: 0;
-  background-color: #d7eaf3;
+  background-color: #fefff6;
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 80%;
   margin: 0 auto;
   padding: 20px;
 }
@@ -17,12 +19,12 @@ body {
 /* HEADER CONTENT */
 
 header {
-  background-color: #77b5d9;
-  color: #d7eaf3;
+  background-color: #9DC08B;
+  color: #EDF1D6;
   padding: 20px;
   justify-content: space-between; /* Align items horizontally */
-  border-bottom-color: #14397d;
-  border-bottom-style: solid;
+  /* border-bottom-color: #609966;
+  border-bottom-style: solid; */
   display: flex;
   align-items: center;
 }
@@ -40,9 +42,9 @@ header ul {
 
 header ul li {
   border-style: outset;
-  border-color: #14397d;
-  background-color: #ece5b5;
-  border-radius: 5px;
+  border-color: #293625;
+  background-color: #EDF1D6;
+  border-radius: 12px;
   display: inline;
   margin-right: 20px;
   padding: 5px;
@@ -50,7 +52,7 @@ header ul li {
 }
 
 header ul li a {
-  color: #14397d;
+  color: #293625;
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
@@ -59,12 +61,12 @@ header ul li a {
 
 /* Change the link color on hover */
 header ul li:hover {
-  background-color: #14397d;
+  background-color: #293625;
   text-decoration: none;
 }
 
 header ul li:hover a {
-  color: #d7eaf3;
+  color:#EDF1D6;
   text-decoration: none;
 }
 
@@ -73,13 +75,13 @@ header .home-icon {
   margin: 0;
   text-decoration: none;
   border-style: outset;
-  border-color: #14397d;
-  border-radius: 5px;
+  border-color: #293625;
+  border-radius: 12px;
   display: inline;
   margin-right: 20px;
   padding-left: 2px;
   padding-right: 2px;
-  background-color: #ece5b5;
+  background-color: #EDF1D6;
   display: flex;
   align-items: center; /* Center navigation links vertically */
 }
@@ -89,16 +91,16 @@ header .home-icon svg {
 }
 
 header .home-icon:hover {
-  background-color: #14397d;
-  color: #d7eaf3;
+  background-color: #293625;
+  color: #EDF1D6;
   text-decoration: none;
 }
 
 header .home-icon:hover path {
-  stroke: #d7eaf3; /* Set the new fill color on hover */
+  stroke:#EDF1D6; /* Set the new fill color on hover */
 }
 header .home-icon:hover rect {
-  fill: #d7eaf3; /* Set the new fill color on hover */
+  fill: #EDF1D6; /* Set the new fill color on hover */
 }
 
 /*MAIN CONTENT CSS*/
@@ -108,7 +110,7 @@ main {
 }
 
 section h2 {
-  color: #14397d;
+  color: #293625;
   margin-top: 0;
 }
 
@@ -127,16 +129,16 @@ section p {
 }
 
 footer {
-  background-color: #77b5d9;
-  color: #14397d;
+  background-color: #9DC08B;
+  color: #293625;
   text-align: center;
   padding: 10px;
-  border-top-color: #14397d;
-  border-top-style: solid;
+  /* border-top-color: #293625;
+  border-top-style: solid; */
 }
 
 a {
-  color: #14397d;
+  color: #293625;
   text-decoration: none;
 }
 
@@ -147,7 +149,7 @@ a {
   /*shape-outside: circle(); /* This creates a circular text wrap */
   margin-left: 20px;
   border-radius: 20%;
-  border: double #14397d;
+  border: double #293625;
 }
 
 .about-image.right {
@@ -163,7 +165,6 @@ a {
 }
 
 .welcome {
-  max-width: 1000px;
   margin: 0 auto;
   align-items: center;
 }
@@ -178,13 +179,13 @@ a {
 }
 
 .welcome .image-wrapper {
-  flex: 0 0 45%; /* 45% width for the image wrapper */
+  flex: 0 0 30%; /* 45% width for the image wrapper */
 }
 
 .welcome .image-wrapper img {
   width: 100%; /* Make the image fill its container */
-  border-radius: 5px;
-  border-color: #14397d;
+  border-radius: 20%;
+  border-color: #293625;
   border-style: solid;
 }
 
@@ -195,9 +196,15 @@ a {
 }
 
 .welcome h2 {
-  color: #14397d;
+  color: #293625;
   margin-top: 0;
   font-size: 48px;
+  font-weight: bold;
+}
+
+.welcome h3 {
+  color: #264b2a;
+  font-size: xx-large;
   font-weight: bold;
 }
 
@@ -246,7 +253,7 @@ a {
 }
 
 .card-title {
-  background-color: #14397d;
+  background-color: #293625;
   color: #ece5b5;
   font-size: x-large;
   padding: 0.75rem;

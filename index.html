@@ -5,92 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Francesca Delmolino</title>
     <link rel="icon" type="image/x-icon" href="assests/Gamepad_light.svg" />
-    <link rel="stylesheet" href="css/globals.css" />
+    <link rel="stylesheet" href="./css/tailwindscss.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   </head>
-  <body>
+  <body class="container">
     <header>
-      <a class="home-icon" href="index.html">
-        <svg
-          width="40"
-          height="40"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect x="14" y="16" width="2" height="2" rx="1" fill="#293625" />
-          <path d="M8 12H6" stroke="#293625" stroke-linecap="round" />
-          <path d="M6 10L6 14" stroke="#293625" stroke-linecap="round" />
-          <rect x="17" y="14" width="2" height="2" rx="1" fill="#293625" />
-          <path
-            d="M14 8V8C14 7.58326 14 7.37488 13.9655 7.19144C13.8455 6.5546 13.4245 6.01534 12.8358 5.74455C12.6662 5.66654 12.464 5.616 12.0597 5.51493L12 5.5C11.5388 5.3847 11.3082 5.32706 11.1171 5.233C10.5686 4.96315 10.1737 4.45731 10.0449 3.85979C10 3.65151 10 3.41382 10 2.93845V2"
-            stroke="#293625"
-            stroke-linecap="round"
-          />
-          <path
-            d="M3 14C3 11.4412 3 10.1618 3.61994 9.28042C3.77954 9.05351 3.96572 8.85041 4.17372 8.6763C4.98164 8 6.15442 8 8.5 8H15.5C17.8456 8 19.0184 8 19.8263 8.6763C20.0343 8.85041 20.2205 9.05351 20.3801 9.28042C21 10.1618 21 11.4412 21 14C21 16.5588 21 17.8382 20.3801 18.7196C20.2205 18.9465 20.0343 19.1496 19.8263 19.3237C19.0184 20 17.8456 20 15.5 20H8.5C6.15442 20 4.98164 20 4.17372 19.3237C3.96572 19.1496 3.77954 18.9465 3.61994 18.7196C3 17.8382 3 16.5588 3 14Z"
-            stroke="#293625"
-          />
-          <path d="M8 10H6" stroke="#293625" stroke-linecap="round" />
-          <path d="M9 18C11.5 18 12 14 9 14" stroke="#293625" />
-          <path d="M9 14L9 18" stroke="#293625" stroke-linecap="round" />
-          <path d="M16.5 10V13" stroke="#293625" stroke-linecap="round" />
-          <path d="M15 11.5H18" stroke="#293625" stroke-linecap="round" />
-        </svg>
-      </a>
-      <nav class="navbar">
-        <ul>
-          <li><a href="about.html" style="text-decoration: none">About</a></li>
-          <li>
-            <a href="projects.html" style="text-decoration: none">Projects</a>
-          </li>
-          <li>
-            <a href="connect.html" style="text-decoration: none">Connect</a>
-          </li>
-          <li>
-            <a href="resume.html" style="text-decoration: none">Resume</a>
-          </li>
-        </ul>
-      </nav>
+      <!-- Navbar -->
+        <nav>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="connect.html">Connect</a></li>
+          </ul>
+        </nav>
     </header>
+    <!-- Hello! -->
     <main>
-      <div class="welcome">
-        <div class="container">
-          <h2>Hi, I'm <b>Francesca Delmolino.</b></h2>
-          <div class="content-wrapper">
-            <div class="image-wrapper">
-              <img
-                src="assests/Delmolino_Francesca.jpg"
-                alt="Francesca-Headshot"
-              />
-            </div>
-            <div class="text-wrapper">
-              <h3>Data Scientist, Cloud Computing Enthusiast, Web Systems Nerd </h3>
-              <p>
-                I'm a rising senior at the
-                <b>University of Michigan</b> studying
-                <b>Data Science</b>&#x1F4DF; with a minor in
-                <b>Earth Sciences</b>&#x1F33F;
-              </p>
-              <p>
-                Welcome to my page! Feel free to get to know me in on my
-                <b>About</b> page or learn more about my experience on the
-                <b>Projects</b> page! Thanks for taking the time to learn more
-                about me!
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="hello">Salut!</div>
+      <div class='intro'>I'm Francesca Delmolino</div>
+      <section class="traits">
+        <div>Data Scientist.</div>
+        <div>Sustainability-Driven Innovator.</div>
+        <div></div></section><br>
+      <br><br>
+      <img class="headshot"
+      src="assests/Delmolino_Francesca.jpg"
+      alt="Professional Headshot"
+    />
     </main>
-
     <footer>
-      <div class="container">
-        <!-- Insert Icons for contact info -->
-        <p>
-          &copy; Francesca Delmolino | Data Science | University of Michigan
-          2024
-        </p>
-      </div>
+      <section>      
+        <img
+        src="assests/Plants.gif"
+        alt="Four 8-bit succulent gif"
+        />
+      </section>
+      <br>
+      <section id="connect">
+        <i id="github" class="fa fa-github fa-2x"></i>
+        <i id="linkedin" class="fa fa-linkedin fa-2x"></i>
+        <i id="gmail" class="fa fa-envelope fa-2x"></i>
+      </section>
+      <p>
+        &copy; Francesca Delmolino | Data Scientist | 2024
+      </p>
     </footer>
   </body>
 </html>
+<style>
+
+</style>

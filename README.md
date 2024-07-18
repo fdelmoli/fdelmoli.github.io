@@ -1,3 +1,5 @@
-# My Personal Website
+# My Personal Website 🪴
+## Welcome to my site!  
+It is currently under construction 🚧.   
 
-Currently under construction. Only available on Web Browser and is not now compatible with mobile devices.
+*Only available on Web Browser and is not now compatible with mobile devices.*

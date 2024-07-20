@@ -1,65 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Francesca Delmolino</title>
-    <link rel="icon" type="image/x-icon" href="assests/Gamepad_light.svg" />
-    <link rel="stylesheet" href="./css/tailwindscss.css" />
+    <!----Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  </head>
-  <body class="container">
-    <header>
-      <!-- Navbar -->
-        <nav>
-          <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="connect.html">Connect</a></li>
-          </ul>
-        </nav>
-    </header>
-    <!-- Hello! -->
-    <main>
-      <div class="hello">Salut!</div>
-      <div class='intro'>I'm Francesca Delmolino</div>
-      <section class="traits">
-        <div>Data Scientist.</div>
-        <div>Sustainability-Driven Innovator.</div>
-        <div></div></section><br>
-      <br><br>
-      <img class="headshot"
-      src="assests/Delmolino_Francesca.jpg"
-      alt="Professional Headshot"
-    />
-    </main>
-    <footer>
-      <section>      
-        <img
-        src="assests/Plants.gif"
-        alt="Four 8-bit succulent gif"
-        />
-      </section>
-      <br>
-      <section id="connect">
-        <i id="github" class="fa fa-github fa-2x"></i>
-        <i id="linkedin" class="fa fa-linkedin fa-2x"></i>
-        <i id="gmail" class="fa fa-envelope fa-2x"></i>
-      </section>
-      <p>
-        &copy; Francesca Delmolino | Data Scientist | 2024
-      </p>
-    </footer>
-  </body>
-</html>
-<style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cantora+One&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-leaf"></i>
+                    <div class="logo-text">Francesca Delmolino</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                 <div class="hero-pic">
+                    <img src="assests/about_me_photo.jpg" alt="profile pic">
+                 </div>
+                 <div class="hero-text">
+                    <h3>Hello & Welcome!</h3>
+                    <h1>I'm Francesca Delmolino</h1>
+                    <h5><span class="input"></span></h5>
+                 </div>
+            </div>
+            <section class="plants">      
+                <img
+                src="assests/Plants.gif"
+                alt="Four 8-bit succulent gif"
+                />
+            </section>
+            <footer>
+                <br>
+                <div class="social">
+                    <a href="https://github.com/fdelmoli"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/francesca-delmolino-6a390020a"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <br>
+                <p>
+                    &copy; Francesca Delmolino | Data Scientist | 2024
+                </p>
+             </footer>
+        </div>
+     </div>
+     <!---typed js for typing text effect-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+     <script>
+        /** creating button click show hide navbar **/
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
 
-</style>
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed=new Typed(".input",{
+            strings:["Data Scientist","Sustainability Ambassador","Web Developer","Eco-Friendly Technologist", "Cloud Novice"],
+            typeSpeed: 30, 
+            backDelay: 800,
+            backSpeed: 30,
+            loop:true,
+        })
+     </script>
+</body>
+</html>

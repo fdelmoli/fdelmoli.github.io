@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>About</title>
+    <link rel="stylesheet" href="css/projects.css">
+    <title>Portfolio</title>
     <!----Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,18 +36,28 @@
                     </ul>
                 </nav>
             </header>
-                <div class="container">
-                    <div class="about-text">
-                        <b>Hi! I'm Francesca!</b>
-                        I am a passionate learner based outside Washington D.C. 
-                        I'm a recent graduate of the University of Michigan specializing in
-                        Data Science &#x1F4DF; with a minor in Earth Sciences &#x1F33F;
-                        <b>GO BLUE!</b>
-                        When I'm not coding or learning new things, you'll find me cultivating my Stardew Valley farm 
-                        or listening to the Magnus Archives.
-                        I also love reading horror, thrillers, and mystery novels!
+            <section class="experiences">
+                <div class="row">
+                    <div class="column">
+                        <h2>KTP Life App</h2>
+                        <div class="hero-pic"><img src="assests/KTPLife.jpg" alt="KTP Life App Store Ad"></div>
+                        <p>The KTP Rush App is a one-stop shop for all things KTP recruitment — users can view our calendar with event details, create a profile to share their academic accomplishments, and get to know KTP members, our Executive Board, and fellow students going through recruitment. Available on the IOS App Store and Google Play Store.</p>
+                        <br><b>Flutter, Dart, Android Studio, Figma</b>
+                    </div>
+                    <div class="column">
+                        <h2>The Michigan Daily Games User Interface</h2>
+                        <div class="hero-pic"><img src="assests/crossword.png" alt="KTP Life App Store Ad"></div>
+                        <p>Redesigned and Implemented new user interface for website application of crosswords. Collaborated to integrate WordPress data into a dynamic user friendly page</p>
+                        <br><b>Svelte, SQLite, Wordpress, React.js</b>
+                    </div>
+                    <div class="column">
+                        <h2>KTP Life App</h2>
+                        <div class="hero-pic"><img src="assests/KTPLife.jpg" alt="KTP Life App Store Ad"></div>
+                        <p>The KTP Rush App is a one-stop shop for all things KTP recruitment — users can view our calendar with event details, create a profile to share their academic accomplishments, and get to know KTP members, our Executive Board, and fellow students going through recruitment. Available on the IOS App Store and Google Play Store.</p>
+                        <br><b>Flutter, Dart, Android Studio, Figma</b>
                     </div>
                 </div>
+            </section>
             <section class="plants">      
                 <img
                 src="assests/Plants.gif"
@@ -80,7 +91,7 @@
         })
 
         var typed=new Typed(".input",{
-            strings:["Data Scientist","Sustainability Ambassador","Web Developer"],
+            strings:["Data Scientist","Sustainability Ambassador","Web Developer","Eco-Friendly Technologist"],
             typeSpeed: 30, 
             backDelay: 800,
             backSpeed: 30,

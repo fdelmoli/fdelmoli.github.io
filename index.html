@@ -1,88 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Francesca Delmolino</title>
-    <!----Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cantora+One&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Francesca Delmolino | Data Scientist</title>
+<meta name="description" content="Francesca Delmolino: data scientist in Philadelphia, web developer, and sustainability ambassador.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<style>
+/* Palette: Chilli Green #28430A, Avocado #507B00, Atlantis #95C22B,
+   Nutmeg #7B4425, Royal Mahogany #63371E, warm cream #F4F1EA */
+:root{
+  --bg:#f4f1ea;--band:#e9e9d6;--card:#fffdf8;--ink:#28430a;--muted:#63371e;--line:#d9d6bf;
+  --jade:#507b00;--on-jade:#ffffff;--grass:#95c22b;--accent:#95c22b;--on-accent:#28430a;--badge:#7b4425;--badge-ink:#ffffff;
+  --wood:#e3c4a0;--wood-d:#7b4425;--wood-ink:#63371e;
+  --t-jade:#dce9bd;--t-gold:#efe4c8;--t-sky:#d9e9ea;--t-rose:#ebd5c5;--t-lilac:#e6ead6;
+  --sea:#d9ebf0;--land:#d3e2a6;--visit:#7b4425;--focus:#28430a;--shadow:rgba(40,67,10,.15);--tree1:#28430a;--tree2:#507b00;--tree3:#95c22b;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17240a;--band:#1f3010;--card:#2a3f14;--ink:#f4f1ea;--muted:#d6cfbd;--line:#3d5424;--jade:#95c22b;--on-jade:#28430a;--grass:#95c22b;--accent:#95c22b;--on-accent:#28430a;--badge:#e0b48c;--badge-ink:#28430a;--wood:#7b4425;--wood-d:#e0b48c;--wood-ink:#f4f1ea;--t-jade:#35501a;--t-gold:#4a3a22;--t-sky:#24443f;--t-rose:#5a3822;--t-lilac:#3a4a1f;--sea:#22404a;--land:#4d6b2a;--visit:#e0a672;--focus:#f4d67a;--shadow:rgba(0,0,0,.4);--tree1:#3f6a17;--tree2:#6a9a22;--tree3:#9fcb3a}}
+:root[data-theme="dark"]{--bg:#17240a;--band:#1f3010;--card:#2a3f14;--ink:#f4f1ea;--muted:#d6cfbd;--line:#3d5424;--jade:#95c22b;--on-jade:#28430a;--grass:#95c22b;--accent:#95c22b;--on-accent:#28430a;--badge:#e0b48c;--badge-ink:#28430a;--wood:#7b4425;--wood-d:#e0b48c;--wood-ink:#f4f1ea;--t-jade:#35501a;--t-gold:#4a3a22;--t-sky:#24443f;--t-rose:#5a3822;--t-lilac:#3a4a1f;--sea:#22404a;--land:#4d6b2a;--visit:#e0a672;--focus:#f4d67a;--shadow:rgba(0,0,0,.4);--tree1:#3f6a17;--tree2:#6a9a22;--tree3:#9fcb3a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{background:var(--bg);color:var(--ink);font-family:"Nunito",system-ui,sans-serif;font-size:1.125rem;line-height:1.65}
+h1,h2,h3,.fun{font-family:"Fredoka","Nunito",sans-serif;font-weight:500;line-height:1.15}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;background:var(--jade);color:var(--on-jade);padding:10px 18px;border-radius:999px;z-index:50;text-decoration:none;font-weight:700}
+.skip:focus{top:12px}
+
+/* nav */
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px)}
+.bar{display:flex;align-items:center;justify-content:space-between;min-height:76px;gap:12px}
+.brand{font-family:"Fredoka",sans-serif;font-size:1.35rem;font-weight:600;text-decoration:none;display:flex;gap:10px;align-items:center;min-height:44px}
+.brand span{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--t-jade);color:var(--jade)}
+nav ul{display:flex;gap:6px;list-style:none;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+nav a{display:flex;align-items:center;min-height:44px;text-decoration:none;padding:0 16px;border-radius:999px;font-weight:700;font-size:1rem;color:var(--muted);transition:background .2s,color .2s}
+nav a:hover{background:var(--t-jade);color:var(--ink)}
+nav a[aria-current="true"]{background:var(--jade);color:var(--on-jade)}
+#theme,#menu{background:var(--t-jade);border:0;color:var(--ink);width:44px;height:44px;border-radius:50%;cursor:pointer;font-size:1rem}
+#menu{display:none}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:48px 0 72px;min-height:calc(100vh - 76px);display:flex;align-items:center}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center;z-index:1}
+.sky{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hello{font-size:1.4rem;color:var(--jade);font-family:"Fredoka",sans-serif}
+h1{font-size:clamp(3rem,7.5vw,5.6rem);margin:6px 0 14px;color:var(--ink);letter-spacing:-.01em}
+.role{font-size:1.5rem;min-height:2.6rem;font-family:"Fredoka",sans-serif}
+.role .w{background:var(--t-gold);padding:2px 16px;border-radius:999px}
+.lede{max-width:46ch;margin-top:12px;color:var(--muted)}
+.cta{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:50px;text-decoration:none;padding:0 28px;border-radius:999px;background:var(--t-jade);color:var(--ink);font-family:"Fredoka",sans-serif;font-weight:500;font-size:1.15rem;border:0;cursor:pointer;box-shadow:0 5px 0 var(--line);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(2px);box-shadow:0 3px 0 var(--line)}
+.btn.fill{background:var(--jade);color:var(--on-jade);box-shadow:0 5px 0 rgba(0,0,0,.25)}
+.btn.fill:hover{box-shadow:0 3px 0 rgba(0,0,0,.25)}
+.portrait{justify-self:center;position:relative;width:min(100%,330px);text-align:center}
+.portrait .ph{aspect-ratio:1;border-radius:50%;border:8px solid var(--card);box-shadow:0 0 0 5px var(--grass),0 18px 40px var(--shadow);overflow:hidden;background:var(--t-jade)}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.sign{display:inline-block;margin-top:-22px;position:relative;padding:6px 26px;background:var(--wood);border:3px solid var(--wood-d);border-radius:16px;color:var(--wood-ink);font-family:"Fredoka",sans-serif;font-weight:500;box-shadow:0 5px 0 rgba(74,47,23,.35)}
+.pots{position:absolute;right:-34px;bottom:30px;width:100px}
+
+/* evergreen tree rows */
+.treeline{position:absolute;left:0;right:0;bottom:0;height:110px;pointer-events:none;line-height:0}
+.treeline svg{width:100%;height:100%;display:block}
+.treeline.static{position:relative;height:96px;margin-bottom:18px}
+section.s.alt{overflow:hidden;padding-bottom:150px}
+.hero{padding-bottom:150px}
+
+/* sections */
+section.s{padding:84px 0;position:relative}
+section.alt{background:var(--band);border-radius:56px;margin:0 clamp(8px,2vw,28px)}
+h2{font-size:clamp(2.2rem,4.6vw,3.2rem);margin-bottom:10px}
+.sub{color:var(--muted);max-width:56ch;margin:6px 0 34px}
+.card-s{background:var(--card);border-radius:32px;padding:28px 32px;box-shadow:0 10px 30px var(--shadow)}
+
+/* about */
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:36px;align-items:start}
+.about p+p{margin-top:.8em}
+.facts{list-style:none;display:grid;gap:14px}
+.facts li{border-radius:28px;padding:16px 22px;display:grid;grid-template-columns:auto 1fr;gap:2px 16px;align-items:center;font-weight:700}
+.facts i{grid-row:span 2;width:46px;height:46px;border-radius:50%;background:var(--card);display:grid;place-items:center;color:var(--jade)}
+.facts li:nth-child(1){background:var(--t-jade)}.facts li:nth-child(2){background:var(--t-gold)}.facts li:nth-child(3){background:var(--t-sky)}
+.facts small{font-weight:400;color:var(--muted);font-size:1rem}
+
+/* experience */
+.roles{display:grid;gap:16px}
+details.role{background:var(--card);border-radius:30px;box-shadow:0 8px 24px var(--shadow)}
+details.role summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 26px;min-height:64px;border-radius:30px}
+details.role summary::-webkit-details-marker{display:none}
+.rl h3{font-size:1.5rem}
+.rl span{color:var(--muted);font-size:1rem}
+.chev{flex:none;width:40px;height:40px;border-radius:50%;background:var(--t-jade);display:grid;place-items:center;transition:transform .25s;color:var(--jade)}
+details[open] .chev{transform:rotate(180deg)}
+.when{background:var(--t-gold);border-radius:999px;padding:2px 16px;font-weight:700;font-size:.95rem;white-space:nowrap}
+.meta{display:flex;gap:12px;align-items:center}
+.rl .now{color:var(--badge-ink);font-size:.9rem}
+.now{display:inline-block;background:var(--badge);color:var(--badge-ink);border-radius:999px;padding:0 12px;font-size:.9rem;margin-left:8px;font-family:"Nunito",sans-serif;font-weight:700;vertical-align:middle}
+details.role ul{padding:0 30px 24px 52px;display:grid;gap:10px;list-style:"\1F331  "}
+details.role b{font-weight:700;background:linear-gradient(transparent 62%,var(--t-gold) 62%)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:52px}
+.skills h3,.edu h3{font-size:1.4rem;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{border-radius:999px;padding:3px 14px;background:var(--card);box-shadow:0 2px 0 var(--line);font-size:1rem;font-weight:600}
+.skills>div:nth-child(1) .chips span{background:var(--t-jade)}.skills>div:nth-child(2) .chips span{background:var(--t-sky)}.skills>div:nth-child(3) .chips span{background:var(--t-lilac)}.skills>div:nth-child(4) .chips span{background:var(--t-rose)}.skills>div:nth-child(5) .chips span{background:var(--t-gold)}
+.edu{margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.edu ul{padding-left:1.2em}
+
+/* portfolio */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.filters button{font-family:"Fredoka",sans-serif;font-size:1.05rem;min-height:44px;background:var(--card);border:0;color:var(--ink);padding:0 22px;border-radius:999px;cursor:pointer;box-shadow:0 3px 0 var(--line)}
+.filters button[aria-pressed="true"]{background:var(--jade);color:var(--on-jade);box-shadow:0 3px 0 rgba(0,0,0,.25)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px}
+.card{background:var(--card);border-radius:34px;padding:16px 16px 26px;box-shadow:0 10px 30px var(--shadow);display:flex;flex-direction:column;gap:12px;position:relative}
+.card .img{aspect-ratio:16/10;border-radius:24px;background:var(--t-jade);display:grid;place-items:center;overflow:hidden;font-size:2.6rem;color:var(--jade)}
+.card .img img{width:100%;height:100%;object-fit:cover}
+.card h3,.card p,.card .tags{padding:0 10px}
+.card h3{font-size:1.45rem}
+.card p{color:var(--muted);flex:1;font-size:1.05rem}
+.stamp{position:absolute;top:28px;left:28px;background:var(--accent);color:var(--on-accent);border-radius:999px;padding:0 14px;font-weight:700;font-size:.9rem;box-shadow:0 3px 0 rgba(0,0,0,.18)}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:.9rem;font-weight:700;border-radius:999px;padding:0 12px;background:var(--t-sky)}
+.card[hidden]{display:none}
+
+/* travel log */
+.trail{list-style:none;margin-left:22px;padding-left:44px;border-left:5px dotted var(--grass)}
+.trail li{position:relative;padding-bottom:28px}
+.trail li::before{content:"\f1bb";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;left:-72px;top:-2px;width:46px;height:46px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font-size:1rem;box-shadow:0 4px 0 rgba(0,0,0,.15)}
+.trail h3{font-size:1.5rem}
+.trail p{color:var(--muted)}
+
+/* impact */
+.impact{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.impact div{border-radius:34px;padding:26px}
+.impact div:nth-child(1){background:var(--t-jade)}.impact div:nth-child(2){background:var(--t-gold)}.impact div:nth-child(3){background:var(--t-sky)}.impact div:nth-child(4){background:var(--t-rose)}
+.impact i{font-size:1.5rem;width:54px;height:54px;border-radius:50%;background:var(--card);display:grid;place-items:center;color:var(--jade);margin-bottom:12px}
+.impact h3{font-size:1.4rem;margin-bottom:4px}
+
+/* contact */
+.links{display:flex;gap:16px;flex-wrap:wrap}
+
+/* map */
+.mapbox{position:relative;border-radius:40px;background:var(--sea);padding:12px;box-shadow:0 10px 30px var(--shadow)}
+#map{display:block;width:100%;height:auto;border-radius:30px}
+#map .c{fill:var(--land);stroke:var(--card);stroke-width:.7;stroke-linejoin:round;transition:fill .15s}
+#map .c.v{fill:var(--visit);stroke:var(--card);stroke-width:1}
+#map .c:hover,#map .c.hov{fill:var(--accent);cursor:default}
+#map .c:focus-visible{outline:none;stroke:var(--focus);stroke-width:2.5}
+#map .home{pointer-events:none}
+#tip{position:absolute;z-index:5;pointer-events:none;background:var(--ink);color:var(--bg);padding:6px 14px;border-radius:999px;font-weight:700;font-size:1rem;white-space:nowrap;transform:translate(-50%,-135%);opacity:0;transition:opacity .12s}
+#tip.on{opacity:1}
+#tip small{font-weight:600;opacity:.85;margin-left:8px}
+.legend{display:flex;gap:22px;flex-wrap:wrap;margin-top:18px;font-weight:700}
+.legend span{display:flex;align-items:center;gap:8px}
+.legend i{width:20px;height:20px;border-radius:50%;display:inline-block}
+.visited-list{margin-top:20px}
+.visited-list h3{font-size:1.4rem;margin-bottom:10px}
+.mapmsg{padding:40px;text-align:center;color:var(--muted)}
+footer{padding:40px 0 48px;text-align:center;color:var(--muted)}
+footer .gif{display:block;margin:0 auto 14px;max-width:100%;image-rendering:pixelated}
+footer .wrap{display:flex;flex-direction:column;gap:6px;align-items:center}
+footer a{font-weight:700}
+
+@media (max-width:860px){
+  .hero .wrap,.about,.edu{grid-template-columns:1fr}
+  .portrait{order:-1;width:min(70%,260px)}
+  #menu{display:grid;place-items:center}
+  nav ul{display:none;position:absolute;top:76px;left:12px;right:12px;flex-direction:column;background:var(--card);padding:14px;border-radius:28px;box-shadow:0 14px 34px var(--shadow);align-items:stretch}
+  nav ul.open{display:flex}
+  nav a{justify-content:center}
+  section.s{padding:60px 0}
+  details.role summary{flex-wrap:wrap}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+</style>
 </head>
 <body>
-     <div class="hero-header">
-        <div class="wrapper">
-            <header>
-                <div class="logo">
-                    <i class="fa-solid fa-leaf"></i>
-                    <div class="logo-text">Francesca Delmolino</div>
-                </div>
-                <nav>
-                    <div class="togglebtn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <ul class="navlinks">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <div class="container">
-                 <div class="hero-pic">
-                    <img src="assests/about_me_photo.jpg" alt="profile pic">
-                 </div>
-                 <div class="hero-text">
-                    <h3>Hello & Welcome!</h3>
-                    <h1>I'm Francesca Delmolino</h1>
-                    <h5><span class="input"></span></h5>
-                 </div>
-            </div>
-            <section class="plants">      
-                <img
-                src="assests/Plants.gif"
-                alt="Four 8-bit succulent gif"
-                />
-            </section>
-            <footer>
-                <br>
-                <div class="social">
-                    <a href="https://github.com/fdelmoli"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/francesca-delmolino-6a390020a"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-                <br>
-                <p>
-                    &copy; Francesca Delmolino | Data Scientist | 2024
-                </p>
-             </footer>
+<a class="skip" href="#about">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="pine" viewBox="0 0 60 100"><rect x="26" y="84" width="8" height="16" rx="2" fill="#63371e"/><g fill="currentColor"><path d="M30 36L2 88H58Z"/><path d="M30 18L6 62H54Z"/><path d="M30 1L13 40H47Z"/></g></symbol>
+  <symbol id="cactus" viewBox="0 0 80 100"><g fill="none" stroke-linecap="round"><path d="M40 70V26M40 54H24V38M40 46H56V32" stroke="#28430a" stroke-width="18"/><path d="M40 70V26M40 54H24V38M40 46H56V32" stroke="#95c22b" stroke-width="12"/></g><path d="M20 68H60L55 96Q40 100 25 96Z" fill="#7b4425"/><ellipse cx="40" cy="68" rx="20" ry="5" fill="#63371e"/></symbol>
+  <symbol id="succ" viewBox="0 0 80 100"><g fill="#95c22b" stroke="#28430a" stroke-width="3"><ellipse cx="40" cy="40" rx="9" ry="22" transform="rotate(-50 40 52)"/><ellipse cx="40" cy="40" rx="9" ry="22" transform="rotate(50 40 52)"/><ellipse cx="40" cy="38" rx="10" ry="26"/></g><path d="M20 68H60L55 96Q40 100 25 96Z" fill="#63371e"/><ellipse cx="40" cy="68" rx="20" ry="5" fill="#4a2815"/></symbol>
+  <symbol id="cloud" viewBox="0 0 100 50"><path d="M20 46C4 46 2 26 18 24C18 6 44 4 50 20C62 10 86 18 80 36C96 36 96 48 82 46Z" fill="#fff" opacity=".9"/></symbol>
+  <symbol id="sun" viewBox="0 0 100 100"><circle cx="50" cy="50" r="22" fill="#f1d98a"/><g stroke="#f1d98a" stroke-width="6" stroke-linecap="round"><path d="M50 8V18M50 82V92M8 50H18M82 50H92M20 20L27 27M73 73L80 80M80 20L73 27M20 80L27 73"/></g></symbol>
+</svg>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top"><span><i class="fa-solid fa-leaf"></i></span> Francesca Delmolino</a>
+    <nav aria-label="Main">
+      <button id="menu" aria-label="Open menu" aria-expanded="false" aria-controls="links"><i class="fa-solid fa-bars"></i></button>
+      <ul id="links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#work">Portfolio</a></li>
+        <li><a href="#travel">Travel</a></li>
+        <li><a href="#impact">Green</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#worldmap">My map</a></li>
+        <li><button id="theme" aria-label="Switch between light and dark mode"><i class="fa-solid fa-circle-half-stroke"></i></button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-label="Introduction">
+    <svg class="sky" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <use href="#sun" x="1010" y="14" width="120" height="120"/>
+      <use href="#cloud" x="690" y="46" width="160" height="80"/>
+      <use href="#cloud" x="40" y="570" width="140" height="70"/>
+    </svg>
+    <div class="wrap">
+      <div>
+        <p class="hello">Hello and welcome!</p>
+        <h1>Francesca Delmolino</h1>
+        <p class="role">I’m a <span class="w" id="word" aria-hidden="true">Data Scientist</span><span class="sr">data scientist, web developer and sustainability ambassador</span></p>
+        <p class="lede">Senior Data Analyst at Capital One, living in Philadelphia. I build data pipelines and dashboards, care about ethical data, sustainable innovation and mapping with GIS, and want AI to make the world better.</p>
+        <div class="cta">
+          <a class="btn fill" href="#work">See my work</a>
+          <a class="btn" href="#worldmap"><i class="fa-solid fa-earth-americas"></i> My travel map</a>
         </div>
-     </div>
-     <!---typed js for typing text effect-->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
-     <script>
-        /** creating button click show hide navbar **/
-        var togglebtn=document.querySelector(".togglebtn");
-        var nav=document.querySelector(".navlinks");
-        var links=document.querySelector(".navlinks li");
+      </div>
+      <div class="portrait">
+        <div class="ph"><img src="assests/about_me_photo.jpg" alt="Portrait of Francesca Delmolino"></div>
+        <span class="sign">Philly-based</span>
+        <svg class="pots" viewBox="0 0 170 100" aria-hidden="true"><use href="#cactus" x="0" y="0" width="80" height="100"/><use href="#succ" x="80" y="10" width="80" height="90"/></svg>
+      </div>
+    </div>
+    <div class="treeline" data-seed="1" aria-hidden="true"></div>
+  </section>
 
-        togglebtn.addEventListener("click", function(){
-            this.classList.toggle("click");
-            nav.classList.toggle("open");
-        })
+  <section class="s" id="about">
+    <div class="wrap about">
+      <div class="card-s">
+        <h2>Hi! I’m Francesca.</h2>
+        <p>I’m a passionate learner based in Philadelphia, and a graduate of the University of Michigan, where I studied Data Science with a minor in Earth Sciences. Go Blue!</p>
+        <p>I like questions where numbers meet the natural world: how land, water and climate change, and how technology can leave a lighter footprint. For sustainability work, I especially enjoy mapping, geospatial analysis in GIS, and modeling.</p>
+        <p>When I’m not coding or learning something new, you’ll find me tending my Stardew Valley farm, listening to The Magnus Archives, or reading horror, thrillers and mysteries.</p>
+      </div>
+      <ul class="facts">
+        <li><i class="fa-solid fa-database"></i> Senior Data Analyst<small>Capital One, since January 2026</small></li>
+        <li><i class="fa-solid fa-graduation-cap"></i> B.S. Data Science, Earth Sciences minor<small>University of Michigan, GPA 3.79</small></li>
+        <li><i class="fa-solid fa-location-dot"></i> Philadelphia, PA<small>New home base</small></li>
+      </ul>
+    </div>
+  </section>
 
-        var typed=new Typed(".input",{
-            strings:["Data Scientist","Sustainability Ambassador","Web Developer","Eco-Friendly Technologist", "Cloud Novice"],
-            typeSpeed: 30, 
-            backDelay: 800,
-            backSpeed: 30,
-            loop:true,
-        })
-     </script>
+  <section class="s alt" id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <p class="sub">Where I’ve worked and taught, newest first. Select a role to see what I did.</p>
+      <div class="roles" id="roles"></div>
+      <div class="skills" id="skills"></div>
+      <div class="edu">
+        <div class="card-s"><h3>University of Michigan, Ann Arbor</h3><p>B.S. Data Science, minor in Earth Sciences. May 2024, GPA 3.79.</p>
+          <ul><li>University Honors (Dean’s List)</li><li>James B. Angell Scholar</li><li>Undergraduate Underclassmen Honors College, 2020 to 2022</li></ul></div>
+        <div class="card-s"><h3>Relevant coursework</h3><div class="chips" id="courses"></div>
+          <h3 style="margin-top:18px">Languages</h3><p>English (native), French (proficient)</p></div>
+      </div>
+    </div>
+    <div class="treeline" data-seed="2" aria-hidden="true"></div>
+  </section>
+
+  <section class="s" id="work">
+    <div class="wrap">
+      <h2>Portfolio</h2>
+      <p class="sub">Projects I’ve built. Pick a category to narrow them down.</p>
+      <div class="filters" role="group" aria-label="Filter projects by type">
+        <button aria-pressed="true" data-f="all">All</button>
+        <button aria-pressed="false" data-f="app">Apps</button>
+        <button aria-pressed="false" data-f="web">Web</button>
+        <button aria-pressed="false" data-f="data">Data</button>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="s alt" id="travel">
+    <div class="wrap">
+      <h2>Travel log</h2>
+      <p class="sub">The places I’ve called home so far.</p>
+      <ol class="trail" id="trail"></ol>
+    </div>
+    <div class="treeline" data-seed="3" aria-hidden="true"></div>
+  </section>
+
+  <section class="s" id="impact">
+    <div class="wrap">
+      <h2>Staying green</h2>
+      <p class="sub">Four ideas that guide how I work and travel.</p>
+      <div class="impact">
+        <div><i class="fa-solid fa-chart-line"></i><h3>Measure first</h3><p>Good decisions about the planet start with honest data.</p></div>
+        <div><i class="fa-solid fa-leaf"></i><h3>Build light</h3><p>Fast, simple pages use less energy. This site has no framework and no heavy images.</p></div>
+        <div><i class="fa-solid fa-map-location-dot"></i><h3>Map it</h3><p>GIS and geospatial modeling show where problems and solutions really are on the ground.</p></div>
+        <div><i class="fa-solid fa-compass"></i><h3>Travel thoughtfully</h3><p>Slow trips, local places, and leaving each one better than I found it.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s alt" id="contact">
+    <div class="wrap">
+      <h2>Let’s connect</h2>
+      <p class="sub">Open to data, web and sustainability projects. Say hello on either of these.</p>
+      <div class="links">
+        <a class="btn fill" href="https://github.com/fdelmoli"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a class="btn fill" href="https://www.linkedin.com/in/francesca-delmolino-6a390020a"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      </div>
+    </div>
+    <div class="treeline" data-seed="4" aria-hidden="true"></div>
+  </section>
+
+  <section class="s" id="worldmap">
+    <div class="wrap">
+      <h2>Places I’ve been</h2>
+      <p class="sub">Hover over, tap, or tab to any country to see its name. The countries I’ve visited are in red.</p>
+      <div class="mapbox">
+        <div id="tip" role="status"></div>
+        <svg id="map" viewBox="0 0 1000 504" role="img" aria-label="World map. The countries I have visited are listed below the map."><rect width="1000" height="504" fill="var(--sea)"/></svg>
+        <p class="mapmsg" id="mapmsg">Loading the map…</p>
+      </div>
+      <div class="legend"><span><i style="background:var(--visit)"></i> Been there</span><span><i style="background:var(--land)"></i> Still on the list</span><span><i style="background:var(--accent)"></i> Under your cursor</span></div>
+      <div class="visited-list"><h3 id="vcount">Countries visited</h3><div class="chips" id="vlist"></div></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="treeline static" data-seed="5" aria-hidden="true"></div>
+  <div class="wrap">
+    <img class="gif" src="assests/Plants.gif" alt="Four 8-bit succulents" onerror="this.remove()">
+    <span>&copy; <span id="yr">2026</span> Francesca Delmolino | Data Scientist | Philadelphia, PA</span>
+    <a href="#top">Back to the top</a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+<script>
+/* =====================================================
+   EDIT YOUR CONTENT HERE
+   ===================================================== */
+
+/* Countries you have visited. Use the names exactly as the map spells them
+   (e.g. "United States of America", "United Kingdom", "Czechia", "South Korea",
+   "Dem. Rep. Congo"). Common short names like "USA", "UK", "United States"
+   are accepted too. */
+const VISITED_COUNTRIES=["United States of America"];
+
+/* Your home, shown as a star: [longitude, latitude] */
+const HOME=[-75.17,39.95];
+
+const PROJECTS=[
+ {t:"KTP Rush App",d:"A one-stop shop for KTP recruitment: event calendar, member and Executive Board profiles, and a place to share accomplishments. Turned mockups into reusable Flutter code, stored data on Firebase, and ran beta tests and user research with a team of 16. On the iOS App Store and Google Play.",img:"assests/KTPLife.jpg",tags:["Flutter","Dart","Firebase","Figma"],cat:["app"]},
+ {t:"Michigan Daily Crossword Redesign",d:"Designed and built a new interface for the Daily’s crossword section in Svelte, and moved SQLite queries to a Cloudflare D1 database to support new crossword categories.",img:"assests/crossword.png",tags:["Svelte","SQLite","Cloudflare D1","WordPress"],cat:["web","data"]},
+ {t:"Predicting a Fortnite Player’s Mental State",d:"Compared Random Forest, Logistic Regression, SVM and Gradient Boosting in R to predict mental state from in-game stats: up to 70% accuracy, 26% minimum test error. Addressed collinearity and dataset bias, and concluded more study is needed to counter that bias.",img:"",tags:["R Studio","Random Forest","SVM","Gradient Boosting"],cat:["data"]}
+];
+const ROLES=[
+ {t:"Senior Data Analyst",o:"Capital One, McLean, VA",w:"Jan 2026 to present",now:1,b:["<b>Engineered and maintained automated ETL pipelines</b> in Databricks powering Tableau dashboards for enterprise marketing stakeholders.","<b>Architected a proactive monitoring framework</b> for the Discover and Capital One infrastructure integration, protecting data integrity across newly merged marketing environments.","<b>Found and fixed 5 critical messaging pitfalls</b> with custom I=E monitoring tools, preventing downstream data corruption and keeping customer targeting accurate."]},
+ {t:"Data Analyst",o:"Capital One, McLean, VA",w:"Aug 2024 to Jan 2026",b:["Built a month-over-month trend detection system for I=E dashboards, <b>cutting trend identification latency by 60%</b>.","Developed and deployed data pipelines for high-impact credit policy intents.","<b>Advised adoption of a new data integration layer</b> for a novel credit initiative, using an internal data badging platform.","<b>Brought DevOps practices to the team</b> by moving legacy scripts and docs to GitHub, with CI/CD-style version control and a central repository."]},
+ {t:"Instruction Aide, EECS 485 Web Systems",o:"University of Michigan, Ann Arbor, MI",w:"Aug 2023 to May 2024",b:["Built and maintained a dual-queue office hours system with more accurate wait times.","Taught a 40-student lab section on web frameworks and system applications.","Held one-on-one office hours to debug projects for a course of <b>750 students</b>.","Led student wellness efforts to support success and course progress."]},
+ {t:"Data Engineering Intern",o:"Accenture Federal Services, Arlington, VA",w:"Jun to Aug 2023",b:["Developed an automated release process in ServiceNow under DevSecOps governance and Agile frameworks.","Created a cross-functional Release Process Dashboard to monitor automated tasks and the CI/CD pipeline.","Demonstrated automated workflows with REST APIs and JavaScript, <b>reducing pipeline tasks by 13%</b>.","Wrote application documentation for clients and general users, such as the Visitor Control Log."]},
+ {t:"Mobile Application and Frontend Developer",o:"The Michigan Daily, Ann Arbor, MI",w:"Feb 2023 to May 2024",b:["Maintained and upgraded the Michigan Daily mobile app for Ann Arbor news.","Translated WordPress code into HTML and CSS blocks for the app.","Designed and built the new crossword interface in Svelte and moved SQLite queries to Cloudflare D1.","Added a splash screen and navigation with React Native and Expo, collaborating through GitHub."]},
+ {t:"Lead STEM Instructor",o:"NOVA Community College SySTEMic Program, Manassas, VA",w:"Jul 2022",b:["Taught programming basics with Micro:Bit in MakeCode, Python and JavaScript.","Built motorized manual and autonomous rovers with VEX GO Robotics.","Supervised students designing prototype spacecraft and heat shields."]}
+];
+const SKILLS={"Languages":["C","C++","SQL","Python","R","Dart","Java","JavaScript","HTML","CSS"],"Frameworks":["React.js","React Native","Flutter","Svelte","TensorFlow","Flask","Expo","Bootstrap","Jinja2","AJAX"],"Data and cloud":["Databricks","Snowflake","Tableau","AWS EC2","AWS QuickSight","Firebase","MongoDB","Hadoop","ServiceNow","ArcGIS Pro","Jupyter"],"Sustainability interests":["GIS and mapping","Geospatial analysis","Environmental modeling"],"Tools":["VS Code","Android Studio","R Studio","Linux","Ubuntu (WSL)","Unix","GitHub"]};
+const COURSES=["Data Structures and Algorithms","Linear Regression Analysis","Data Mining","Artificial Intelligence","Web Systems","Database Management","Cybersecurity","Modeling Human Behavior with ML","GIS Systems and Applications"];
+const TRIPS=[
+ {p:"Philadelphia, Pennsylvania",n:"Current home base. Rivers, trails and a lot of good food."},
+ {p:"Washington, D.C. area",n:"Home before the move to Philly, and where I started my career."},
+ {p:"Ann Arbor, Michigan",n:"Where I studied data science and earth sciences."}
+];
+const WORDS=["Data Scientist","Sustainability Ambassador","Web Developer","Eco-Friendly Technologist","GIS and Mapping Enthusiast","Cloud Novice","Plant Parent","Traveler"];
+const ALIAS={"usa":"United States of America","us":"United States of America","united states":"United States of America","uk":"United Kingdom","great britain":"United Kingdom","england":"United Kingdom","scotland":"United Kingdom","czech republic":"Czechia","korea":"South Korea","republic of korea":"South Korea","drc":"Dem. Rep. Congo","democratic republic of the congo":"Dem. Rep. Congo","ivory coast":"Côte d’Ivoire","bosnia":"Bosnia and Herz.","dominican republic":"Dominican Rep.","central african republic":"Central African Rep.","eswatini":"eSwatini","north macedonia":"Macedonia","myanmar":"Myanmar"};
+
+/* =====================================================
+   SITE CODE (no need to edit below)
+   ===================================================== */
+const grid=document.getElementById("grid");
+const LABEL={app:"App",web:"Web",data:"Data"};
+PROJECTS.forEach(p=>{
+  const c=document.createElement("article");
+  c.className="card";c.dataset.cat=p.cat.join(" ");
+  const img=p.img?`<img src="${p.img}" alt="${p.t} preview" loading="lazy" onerror="this.remove()">`:"";
+  c.innerHTML=`<div class="img" aria-hidden="true"><i class="fa-solid fa-seedling"></i>${img}</div><span class="stamp">${LABEL[p.cat[0]]}</span><h3>${p.t}</h3><p>${p.d}</p><div class="tags">${p.tags.map(x=>`<span>${x}</span>`).join("")}</div>`;
+  grid.appendChild(c);
+});
+document.querySelectorAll(".filters button").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll(".filters button").forEach(x=>x.setAttribute("aria-pressed",x===b));
+  document.querySelectorAll(".card").forEach(c=>c.hidden=!(b.dataset.f==="all"||c.dataset.cat.split(" ").includes(b.dataset.f)));
+}));
+document.getElementById("roles").innerHTML=ROLES.map((r,i)=>`<details class="role"${i===0?" open":""}><summary><div class="rl"><h3>${r.t}${r.now?'<span class="now">Current</span>':""}</h3><span>${r.o}</span></div><div class="meta"><span class="when">${r.w}</span><span class="chev" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span></div></summary><ul>${r.b.map(x=>`<li>${x}</li>`).join("")}</ul></details>`).join("");
+document.getElementById("skills").innerHTML=Object.entries(SKILLS).map(([k,v])=>`<div><h3>${k}</h3><div class="chips">${v.map(x=>`<span>${x}</span>`).join("")}</div></div>`).join("");
+document.getElementById("courses").innerHTML=COURSES.map(x=>`<span>${x}</span>`).join("");
+document.getElementById("trail").innerHTML=TRIPS.map(t=>`<li><h3>${t.p}</h3><p>${t.n}</p></li>`).join("");
+
+/* typing role (decorative; screen readers get the full list) */
+const word=document.getElementById("word");
+if(matchMedia("(prefers-reduced-motion:reduce)").matches){}
+else{let w=0,i=0,del=false;(function tick(){
+  const full=WORDS[w];i+=del?-1:1;word.textContent=full.slice(0,i)||"\u00a0";
+  let d=del?30:55;
+  if(!del&&i===full.length){del=true;d=1400}else if(del&&i===0){del=false;w=(w+1)%WORDS.length;d=300}
+  setTimeout(tick,d)})()}
+
+/* ---------- World map (read-only: hover, tap or tab for country names) ---------- */
+(function(){
+  const NS="http://www.w3.org/2000/svg",map=document.getElementById("map"),box=map.parentElement,tip=document.getElementById("tip"),msg=document.getElementById("mapmsg");
+  /* Miller projection: stretches the far north so the Arctic isn't flattened */
+  const K=1000/(2*Math.PI),mil=la=>K*1.25*Math.log(Math.tan(Math.PI/4+.4*la*Math.PI/180));
+  const TOP=mil(85),MH=Math.round(TOP-mil(-57));
+  map.setAttribute("viewBox","0 0 1000 "+MH);map.querySelector("rect").setAttribute("height",MH);
+  const px=([lo,la])=>[((lo+180)/360*1000).toFixed(1),(TOP-mil(la)).toFixed(1)];
+  /* Rings that cross the 180° line (Russia, Fiji) jump from +180 to -180 and draw a streak
+     across the map. Unwrap the longitudes, then draw a shifted copy on the other edge. */
+  const ring=r=>{
+    let prev=null,off=0;const pts=r.map(([lo,la])=>{
+      if(prev!==null){const d=lo+off-prev;if(d>180)off-=360;else if(d<-180)off+=360}
+      prev=lo+off;return [prev,la]});
+    const xs=pts.map(p=>p[0]),hi=Math.max(...xs),lo2=Math.min(...xs);
+    const d=s=>"M"+pts.map(p=>px([p[0]+s,p[1]]).join(",")).join("L")+"Z";
+    return d(0)+(hi>180?d(-360):"")+(lo2<-180?d(360):"");
+  };
+  const norm=s=>s.trim().toLowerCase();
+  const want=new Map(VISITED_COUNTRIES.map(n=>[norm(ALIAS[norm(n)]||n),n]));
+  const list=document.getElementById("vlist"),count=document.getElementById("vcount");
+  function showList(names){
+    count.textContent=names.length?`Countries visited: ${names.length}`:"Countries visited";
+    list.innerHTML=names.length?names.map(n=>`<span>${n}</span>`).join(""):"<span>Add countries to VISITED_COUNTRIES in the script</span>";
+  }
+  showList(VISITED_COUNTRIES.map(n=>ALIAS[norm(n)]||n));
+  if(typeof topojson==="undefined"){msg.textContent="The map couldn’t load. My visited countries are listed below.";return}
+  fetch("https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json").then(r=>r.json()).then(topo=>{
+    const feats=topojson.feature(topo,topo.objects.countries).features.filter(f=>f.properties.name!=="Antarctica");
+    const found=new Set(),mk=(f,v)=>{
+      const g=f.geometry,polys=g.type==="Polygon"?[g.coordinates]:g.coordinates;
+      const p=document.createElementNS(NS,"path");
+      p.setAttribute("d",polys.map(poly=>poly.map(ring).join("")).join(""));
+      p.setAttribute("class","c"+(v?" v":""));p.dataset.name=f.properties.name;
+      if(v){p.setAttribute("tabindex","0");p.setAttribute("role","img");p.setAttribute("aria-label",f.properties.name+", visited")}
+      map.appendChild(p);return p;
+    };
+    const place=(p,x,y)=>{const b=box.getBoundingClientRect();tip.style.left=(x-b.left)+"px";tip.style.top=(y-b.top)+"px"};
+    const show=(p,x,y)=>{const v=p.classList.contains("v");tip.innerHTML=p.dataset.name+(v?"<small>Visited</small>":"");place(p,x,y);tip.classList.add("on")};
+    const vis=[],rest=[];
+    feats.forEach(f=>{const k=norm(f.properties.name);if(want.has(k)){found.add(k);vis.push(f)}else rest.push(f)});
+    [...rest,...vis].forEach(f=>{
+      const p=mk(f,want.has(norm(f.properties.name)));
+      p.addEventListener("pointermove",e=>show(p,e.clientX,e.clientY));
+      p.addEventListener("pointerleave",()=>tip.classList.remove("on"));
+      p.addEventListener("focus",()=>{const r=p.getBoundingClientRect();show(p,r.left+r.width/2,r.top+Math.min(r.height/2,30))});
+      p.addEventListener("blur",()=>tip.classList.remove("on"));
+    });
+    const [hx,hy]=px(HOME),star=document.createElementNS(NS,"path");
+    star.setAttribute("d","M0-9L2.6-3L9-3L4 1.5L6 8L0 4.2L-6 8L-4 1.5L-9-3L-2.6-3Z");
+    star.setAttribute("transform",`translate(${hx} ${hy})`);star.setAttribute("fill","#f1d98a");star.setAttribute("stroke","#28430a");star.setAttribute("stroke-width","1.4");star.setAttribute("class","home");
+    map.appendChild(star);
+    document.addEventListener("pointerdown",e=>{if(!e.target.closest||!e.target.closest("#map"))tip.classList.remove("on")});
+    msg.remove();
+    const missing=[...want.keys()].filter(k=>!found.has(k));
+    if(missing.length)console.warn("Map: these names did not match a country:",missing.map(k=>want.get(k)));
+  }).catch(()=>{msg.textContent="The map couldn’t load. My visited countries are listed below."});
+})();
+
+/* evergreen tree rows: built once, seeded so they look the same every visit */
+document.querySelectorAll(".treeline").forEach(el=>{
+  let r=+el.dataset.seed*9301+49297;const rnd=()=>(r=(r*9301+49297)%233280)/233280;
+  const cols=["var(--tree1)","var(--tree2)","var(--tree3)"];let out="";
+  [[.55,[1,2],26,44],[1,[0,1],30,58]].forEach(([scale,pick,gap,minH],row)=>{
+    for(let x=-10+row*14;x<1210;x+=gap*(.7+rnd()*.7)){
+      const h=(minH+rnd()*(row?44:34)),w=h*.6;
+      out+=`<use href="#pine" x="${x.toFixed(0)}" y="${(100-h).toFixed(0)}" width="${w.toFixed(0)}" height="${h.toFixed(0)}" style="color:${cols[pick[Math.floor(rnd()*2)]]}"/>`;
+    }
+  });
+  el.innerHTML=`<svg viewBox="0 0 1200 100" preserveAspectRatio="xMidYMax slice" focusable="false">${out}</svg>`;
+});
+
+/* nav, theme */
+const menu=document.getElementById("menu"),links=document.getElementById("links");
+menu.addEventListener("click",()=>{const o=links.classList.toggle("open");menu.setAttribute("aria-expanded",o)});
+links.addEventListener("click",e=>{if(e.target.closest("a")){links.classList.remove("open");menu.setAttribute("aria-expanded","false")}});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&links.classList.contains("open")){links.classList.remove("open");menu.setAttribute("aria-expanded","false");menu.focus()}});
+document.getElementById("theme").addEventListener("click",()=>{
+  const r=document.documentElement,dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;
+  r.dataset.theme=dark?"light":"dark";
+});
+const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)document.querySelectorAll("#links a").forEach(a=>{const on=a.getAttribute("href")==="#"+e.target.id;on?a.setAttribute("aria-current","true"):a.removeAttribute("aria-current")})}),{rootMargin:"-45% 0px -50% 0px"});
+document.querySelectorAll("section.s").forEach(s=>spy.observe(s));
+document.getElementById("yr").textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
